@@ -1,3 +1,3 @@
 # Hmm - something on GitHub Pages
 
-[hmmm.html]
+This appears as https://pages.github.umn.edu/umn-csci-2041S18/public-class-repo/
