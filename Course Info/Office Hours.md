@@ -10,6 +10,7 @@
 
 | When | Who | Where |
 | ---- | --- | ----- |
+| 9:00am - 10:00am | Duanyang | 2-209 |
 | 5:30pm - 6:30pm | Mary | 2-209 |
 
 ### Wednesday
@@ -23,6 +24,7 @@
 
 | When | Who | Where |
 | ---- | --- | ----- |
+| 9:00am - 10:00am | Duanyang | 2-209 |
 |      |     |       |
 
 ### Friday
