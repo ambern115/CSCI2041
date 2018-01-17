@@ -61,5 +61,5 @@ To switch over from HTTPS to SSL, cd into your private repo and run this
 command.
 
 ```shell
-$ git remote set-url origin git@github.umn.edu:umn-csci-2041S17/repo-YOUR_INTERNET_ID.git
+$ git remote set-url origin git@github.umn.edu:umn-csci-2041-S18/repo-YOUR_INTERNET_ID.git
 ```
