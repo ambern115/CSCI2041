@@ -18,7 +18,7 @@
 | When | Who | Where |
 | ---- | --- | ----- |
 | 9:00am - 10:00am | Duanyang | Keller 2-209 |
-| 1:00pm - 2:00pm | Ian | Keller 2-209 |
+| 1:00pm - 2:00pm | Nathan | Keller 2-209 |
 | 3:30pm - 5:30pm | Floyd | Keller 2-209 |
 | 5:30pm - 6:30pm | Mary | Keller 2-209 |
 
@@ -37,7 +37,7 @@
 | When | Who | Where |
 | ---- | --- | ----- |
 | 9:00am - 10:00am | Duanyang | Keller 2-209 |
-| 10:00am - 11:00am | Nathan | Keller 2-209 |
+| 10:00am - 11:00am | Ian | Keller 2-209 |
 | 11:00am - 12:15pm | Michael | Keller 2-209 |
 | 12:15pm - 1:15pm | Tasha | Keller 2-209 |
 | 1:15pm - 2:15pm | Chris | Keller 2-209 |
