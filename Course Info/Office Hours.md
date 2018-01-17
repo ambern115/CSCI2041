@@ -6,8 +6,8 @@
 | ---- | --- | ----- |
 | 9:00am - 10:00am | Sean | Keller 2-209 |
 | 10:10am - 11:00am | Julia | Keller 2-209 |
-| 12:30am - 1:30pm | Violet | Keller 2-209 |
-| 1:30pm - 2:30pm | Charlie | Keller 2-209 |
+| 11:30am - 12:30pm | Violet | Keller 2-209 |
+| 12:30pm - 2:30pm | Charlie | Keller 2-209 |
 | 2:25pm - 3:25pm | Eric | Keller 6-203 | 
 | 3:30pm - 4:30pm | Michael | Keller 2-209 |
 | 5:30pm - 6:30pm | Shannyn | Keller 2-209 |
@@ -28,7 +28,7 @@
 | ---- | --- | ----- |
 | 9:00am - 10:15am | Zach | Keller 2-209 |
 | 10:15am - 11:15am | Mary | Keller 2-209 |
-| 12:30pm - 1:30pm | Violet | Keller 2-209 |
+| 11:30pm - 12:30pm | Violet | Keller 2-209 |
 | 2:25pm - 3:25pm | Eric | Keller 6-203 | 
 | 3:30pm - 5:00pm | Saksham | Keller 2-209 |
 
