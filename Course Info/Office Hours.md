@@ -27,7 +27,7 @@
 
 | When | Who | Where |
 | ---- | --- | ----- |
-| 9:00am - 10:15am | Zach | Keller Atrium (Table TBD) |
+| 9:00am - 10:15am | Zach | Keller Atrium Table 4 |
 | 10:15am - 11:15am | Mary | Keller 2-209 |
 | 11:30pm - 12:30pm | Violet | Keller Atrium (Table TBD) |
 | 2:25pm - 3:25pm | Eric | Keller 6-203 | 
