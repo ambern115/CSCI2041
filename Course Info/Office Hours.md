@@ -18,7 +18,8 @@
 | ---- | --- | ----- |
 | 9:00am - 10:00am | Duanyang | Keller 2-209 |
 | 10:00am - 11:00am | Tasha | Keller (Location TBD) |
-| 1:00pm - 2:00pm | Nathan | Keller Atrium (Table TBD) |
+| 1:00pm - 2:00pm | Nathan R. | Keller Atrium (Table TBD) |
+| 2:30pm - 3:30pm | Nathan W. | Keller (Location TBD) |
 | 3:30pm - 5:30pm | Floyd | Keller Atrium Table 2 |
 | 5:30pm - 6:30pm | Mary | Keller 2-209 |
 
