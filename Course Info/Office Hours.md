@@ -42,8 +42,8 @@
 | 12:15pm - 1:15pm | Chris | Keller 2-209 |
 | 1:15pm - 2:15pm | Tasha | Keller 2-209 |
 | 2:25pm - 3:25pm | Sean | Keller 2-209 |
-| 3:30pm - 5:00pm | Saksham | Keller 2-209 |
-| 5:00pm - 7:00pm | Shannyn | Keller 2-209 |
+| 3:30pm - 5:00pm | Saksham | Keller 4-240 |
+| 5:00pm - 7:00pm | Shannyn | Keller 4-240 |
 
 ### Friday
 
@@ -53,4 +53,4 @@
 | 10:00am - 11:00am | Rui | Keller 2-209 |
 | 12:30pm - 1:30pm | Julia | Keller 2-209 |
 | 2:25pm - 3:25pm | Eric | Keller 6-203 | 
-| 5:00pm - 6:00pm | Mitchell | Keller 2-209 |
+| 5:00pm - 6:00pm | Mitchell | Keller 1-260 |
