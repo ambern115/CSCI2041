@@ -17,7 +17,7 @@
 | When | Who | Where |
 | ---- | --- | ----- |
 | 9:00am - 10:00am | Duanyang | Keller 2-209 |
-| 10:00am - 11:00am | Tasha | Keller (Location TBD) |
+| 10:00am - 11:00am | Tasha | Keller Atrium Table 2 |
 | 1:00pm - 2:00pm | Nathan R. | Keller Atrium (Table TBD) |
 | 2:30pm - 3:30pm | Nathan W. | Keller Atrium Table 5 |
 | 3:30pm - 5:30pm | Floyd | Keller Atrium Table 2 |
@@ -41,7 +41,7 @@
 | 10:00am - 11:00am | Ian | Keller Atrium Table 4 |
 | 11:00am - 12:15pm | Michael | Keller Atrium (Table TBD) |
 | 12:15pm - 1:15pm | Chris | Keller (Location TBD) |
-| 1:15pm - 2:15pm | Tasha | Keller (Location TBD) |
+| 1:15pm - 2:15pm | Tasha | Keller Atrium Table 2 |
 | 2:25pm - 3:25pm | Sean | Keller 2-209 (Cancelled for 1/18) |
 | 3:30pm - 5:00pm | Saksham | Keller 4-240 |
 | 5:00pm - 7:00pm | Shannyn | Keller 4-240 |
