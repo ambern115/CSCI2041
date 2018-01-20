@@ -44,7 +44,7 @@
 
 - Tue: May 8: 10:30am  Section 1 (meets at 1:25pm) - Final Exam
 
-- Wed: May 9: 10:30am  Section 10 (meets at 1:25pm) - Final Exam
+- Wed: May 9: 10:30am  Section 10 (meets at 3:35pm) - Final Exam
 
 
 
