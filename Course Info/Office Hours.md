@@ -21,7 +21,7 @@
 | 1:15pm - 2:15pm | Nathan R. | Keller Atrium Table 4 |
 | 2:30pm - 3:30pm | Nathan W. | Keller Atrium Table 5 |
 | 3:30pm - 5:30pm | Floyd | Keller Atrium Table 2 |
-| 5:30pm - 6:30pm | Mary | Keller 2-209 |
+| 5:30pm - 6:30pm | Mary | Keller 4-240 |
 
 ### Wednesday
 
