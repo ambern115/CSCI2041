@@ -6,11 +6,18 @@
 
 - W, Jan 17: Lec: Course introduction and logistics (S0.1)
 
-- F, Jan 19: Lec: Introduction to OCaml, functional programming (S1.1)
+- F, Jan 19: Lec: Introduction to OCaml (S1.1): functional programming
 
   - Lab due at 5pm.
 
 ### Week  2 - Jan 22 
+- M, Jan 22: Lec: Intro to OCaml (S1.1): function design, lists
+
+- T, Jan 23: Lab: Writing OCaml programs
+
+- W, Jan 24: Lec: Intro to OCaml (S1.1): lists and tuples
+
+- F, Jan 25: Lec: Intro to OCaml (S1.1): using both, type systems
 
 ### Week  3 - Jan 29
 
