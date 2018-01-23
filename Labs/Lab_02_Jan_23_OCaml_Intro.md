@@ -54,7 +54,7 @@ Some of the functions that you are asked to solve below are similar to
 ones we've solved in class.  These can be found in ``simple.ml`` in
 the ``code-examples`` directory of the public repository.  Open
 another tab in your browser and you can see that file
-[here](https://github.umn.edu/umn-csci-2041-S18/public-class-repo/blob/master/Sample%20Programs/simple.ml).
+[here](https://github.umn.edu/umn-csci-2041-S18/public-class-repo/blob/master/Sample%20Programs/Sec_10_3-35pm/simple.ml).
 
 ### #1 Circle circumference, version 1
 
