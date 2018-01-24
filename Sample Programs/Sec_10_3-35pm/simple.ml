@@ -47,10 +47,6 @@ let gcd m n =
   help smaller
 
 
-let rec sum xs =
-  match xs with
-  | [] -> 0 
-  | x::rest -> x + sum rest
 
 let rec all xs =
   match xs with
@@ -62,9 +58,9 @@ let rec even2ways xs =
   match xs with
   | [] -> true
   | p::[] -> false
-  | x1::x2::rest -> x1 mod 2 = 0 &&
-                    x2 mod 2 = 0 && 
-                    even2ways rest
+  | x1::(x2::rest) -> x1 mod 2 = 0 &&
+                      x2 mod 2 = 0 && 
+                      even2ways rest
 
 (* an example of pattern matching on int values *)
 let rec even x =
@@ -74,11 +70,47 @@ let rec even x =
   | _ -> even (x-2)
 
 
+let rec sum xs =
+  match xs with
+  | [] -> 0 
+  | x::rest -> x + sum rest
 
-let rec string_concat ss = [] (* fill this in *)
+let rec string_concat sep ss = 
+  match ss with
+  | [] -> ""
+  | s::[] -> s
+  | hd::tl -> hd ^ sep ^ string_concat sep tl
 
 (* Jan 24.  Note that:
    sum - process 1 at a time, look at 1 at a time
    evens2ways - process 2 at a time, look at 2 at a time
-   string_concat - process 1 at a time, look at 2 at a time
+   sum_sqrdiffs - process 1 at a time, look at 2 at a time
  *)
+
+
+let is_empty xs =
+  match xs with
+  | [] -> true
+  | _  -> false
+
+let is_empty' xs = xs = [] 
+
+let not_empty xs =
+  match xs with
+  | [] -> false
+  | _  -> true
+
+(* let not_empty' xs = xs = _ :: _  *)
+let not_empty'' xs = not (xs =[] )
+
+
+let rec sum xs =
+  match xs with
+  | [] -> 0 
+  | x::rest -> x + sum rest
+
+let rec length xs =
+  match xs with
+  | [] -> 0 
+  | _::rest -> 1 + length rest
+
