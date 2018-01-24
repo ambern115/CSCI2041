@@ -19,6 +19,7 @@ let gcd m n =
   in
   f smaller
 
+
 let rec sum xs =
   match xs with
   | [] -> 0 
@@ -43,3 +44,12 @@ let rec even2ways_better xs =
      | x::[] -> false
      | x1::(x2::rest) ->
         x1 mod 2 = 0 && x2 mod 2 = 0 && even2ways rest 
+
+let rec string_concat ss = [] (* fill this in *)
+
+(* Jan 24.  Note that:
+   sum - process 1 at a time, look at 1 at a time
+   evens2ways - process 2 at a time, look at 2 at a time
+   string_concat - process 1 at a time, look at 2 at a time
+ *)
+

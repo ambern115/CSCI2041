@@ -47,6 +47,17 @@ let gcd m n =
   help smaller
 
 
+let rec sum xs =
+  match xs with
+  | [] -> 0 
+  | x::rest -> x + sum rest
+
+let rec all xs =
+  match xs with
+  | [] -> true
+  | x::rest -> if x then all rest else false
+
+
 let rec even2ways xs =
   match xs with
   | [] -> true
@@ -55,8 +66,19 @@ let rec even2ways xs =
                     x2 mod 2 = 0 && 
                     even2ways rest
 
+(* an example of pattern matching on int values *)
 let rec even x =
   match x with
   | 0 -> true
   | 1 -> false
   | _ -> even (x-2)
+
+
+
+let rec string_concat ss = [] (* fill this in *)
+
+(* Jan 24.  Note that:
+   sum - process 1 at a time, look at 1 at a time
+   evens2ways - process 2 at a time, look at 2 at a time
+   string_concat - process 1 at a time, look at 2 at a time
+ *)
