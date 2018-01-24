@@ -40,7 +40,7 @@
 | 9:00am - 10:00am | Duanyang | Keller 2-209 |
 | 10:00am - 11:00am | Ian | Keller Atrium Table 4 |
 | 11:00am - 12:15pm | Michael | Keller Atrium Table 4 |
-| 12:15pm - 1:15pm | Chris | Keller (Location TBD) |
+| 12:15pm - 1:15pm | Chris | Keller Atrium Table 1 |
 | 1:15pm - 2:15pm | Tasha | Keller Atrium Table 2 |
 | 2:25pm - 3:25pm | Sean | Keller 2-209 |
 | 3:30pm - 5:00pm | Saksham | Keller 4-240 |
