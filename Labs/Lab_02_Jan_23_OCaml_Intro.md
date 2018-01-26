@@ -2,7 +2,9 @@
 
 *CSci 2041: Advanced Programming Principles, Spring 2018*
 
-**Due:** Friday, January 26 at 5:00pm.  You should be able to complete
+**UPDATE:** Lab is now due on Monday, January 29 at 5:00pm.
+
+**Due:** ~~Friday, January 26 at 5:00pm.~~  You should be able to complete
 lab work during the lab.   But occasionally some work may not get
 completed, thus this due date. 
 
