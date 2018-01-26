@@ -75,3 +75,17 @@ let rec length xs =
 match xs  with
 | [] -> 0 
 | _::rest -> 1 + length rest
+
+
+let head xs = 
+  match xs with
+  | x::rest -> x
+
+let first triple = 
+  match triple with
+  | (x,y,z) -> x 
+
+let first' (x,y,z) = x
+
+let first'' = function
+  | (x,_,_) -> x 
