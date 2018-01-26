@@ -114,3 +114,26 @@ let rec length xs =
   | [] -> 0 
   | _::rest -> 1 + length rest
 
+
+let head xs = 
+  match xs with
+  | x::rest -> x
+  | [] -> raise (Failure "oh nuts!")
+
+let rec sum_v2 = function
+  | [] -> 0 
+  | x::rest -> x + sum_v2 rest
+
+let rec sum xs =
+  match xs with
+  | [] -> 0 
+  | x::rest -> x + sum rest
+
+let first t =
+  match t with 
+  | (f,_,_) -> f
+
+let first' (f,_,_) = f
+
+let first'' = function
+  | (f,_,_) -> f
