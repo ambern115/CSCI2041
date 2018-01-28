@@ -22,8 +22,6 @@
   - Lab due at 5pm.
   - Quiz 1.
 
-     Quiz 1.
-
 ### Week  3 - Jan 29
 
 ### Week  4 - Feb  5 
