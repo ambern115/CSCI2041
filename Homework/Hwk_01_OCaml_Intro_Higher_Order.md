@@ -123,7 +123,7 @@ For example
 ## Part 2.
 
 Place your solution to these problems in a file named ``higher.ml``.
-This file should not contain definitions of any recursive files. Thus
+This file should not contain definitions of any recursive functions. Thus
 the keyword ``rec`` may not appear in this file.
 
 ### All evens
