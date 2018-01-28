@@ -18,6 +18,8 @@
 - W, Jan 24: Lec: Intro to OCaml (S1.1): lists and tuples
 
 - F, Jan 25: Lec: Intro to OCaml (S1.1): using both, type systems
+  - Lab due at 5pm.
+  - Quiz 1.
 
 ### Week  3 - Jan 29
 
