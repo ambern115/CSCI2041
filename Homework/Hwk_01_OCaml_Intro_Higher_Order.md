@@ -220,8 +220,8 @@ inspiration for it here:
 https://www.npr.org/2018/01/21/579110492/sunday-puzzle-it-takes-two
 
 You will write two functions for this part:
-- ``answers :: string -> string list``
-- ``pretty_answers :: string list -> (string * string) list``
+- ``answers : string -> string list``
+- ``pretty_answers : string list -> (string * string) list``
 
 The primary work will be done by ``answers``.  It takes as input the
 name of a file containing a list of words are returns all 6 letter
