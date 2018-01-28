@@ -15,11 +15,14 @@
 
 - T, Jan 23: Lab: Writing OCaml programs
 
-- W, Jan 24: Lec: Intro to OCaml (S1.1): lists and tuples
+- W, Jan 24: Lec: Intro to OCaml (S1.1): lists and tuples, brief
+  discussion of Quizzes and Quiz 1 material.
 
 - F, Jan 25: Lec: Intro to OCaml (S1.1): using both, type systems
   - Lab due at 5pm.
   - Quiz 1.
+
+     Quiz 1.
 
 ### Week  3 - Jan 29
 

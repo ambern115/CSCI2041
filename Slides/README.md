@@ -10,6 +10,8 @@ are as follows:
 
 0. Course Logistics
    - 1: Introduction to 2041, content and policies.
+   - 2: Information about quizzes: process, format.
+   
 1. Programming in OCaml
    - 1: Introduction to OCaml
    - 2: Higher Order Functions

@@ -2,7 +2,9 @@
 
 *CSci 2041: Advanced Programming Principles, Spring 2018*
 
-**Due:** Friday, January 26 at 5:00pm.  You should be able to complete
+**UPDATE:** Lab is now due on Monday, January 29 at 5:00pm.
+
+**Due:** ~~Friday, January 26 at 5:00pm.~~  You should be able to complete
 lab work during the lab.   But occasionally some work may not get
 completed, thus this due date. 
 
@@ -54,7 +56,7 @@ Some of the functions that you are asked to solve below are similar to
 ones we've solved in class.  These can be found in ``simple.ml`` in
 the ``code-examples`` directory of the public repository.  Open
 another tab in your browser and you can see that file
-[here](https://github.umn.edu/umn-csci-2041-S18/public-class-repo/blob/master/Sample%20Programs/simple.ml).
+[here](https://github.umn.edu/umn-csci-2041-S18/public-class-repo/blob/master/Sample%20Programs/Sec_10_3-35pm/simple.ml).
 
 ### #1 Circle circumference, version 1
 
