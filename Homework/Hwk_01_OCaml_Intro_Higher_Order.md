@@ -313,6 +313,11 @@ utop # pretty_answers (answers d1) ;;
 ```
 
 
+
+### Note the file ``words-google-10000.txt`` comes from this repository:
+
+https://github.com/first20hours/google-10000-english
+
 ## Part 4. Paragraph formatter
 
 Here, you will write a function named ``format`` with the type
@@ -440,4 +445,3 @@ programming.
 
 Then, work to implement each step in order to make progress towards
 the solution.
-
