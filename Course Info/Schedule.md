@@ -19,8 +19,8 @@
   discussion of Quizzes and Quiz 1 material.
 
 - F, Jan 25: Lec: Intro to OCaml (S1.1): using both, type systems
-
-     Quiz 1.
+  - Lab due at 5pm.
+  - Quiz 1.
 
 ### Week  3 - Jan 29
 
