@@ -137,3 +137,31 @@ let first' (f,_,_) = f
 
 let first'' = function
   | (f,_,_) -> f
+
+
+(* Jan 29 - tuples, pulling the pieces together *)
+
+let m = [ ("dog", 1); ("chicken",2); ("dog",3);
+          ("cat",5)]
+
+let rec lookup_all s m = 
+  match m with
+  | [] -> []
+  | (x,y)::rest -> if x = s 
+                   then y :: lookup_all s rest
+                   else lookup_all s rest
+let rec lookup_all' s m = 
+  match m with
+  | [] -> []
+  | (x,y)::rest when  x = s ->
+                y :: lookup_all' s rest
+  | _ ::rest-> lookup_all' s rest
+
+let rec fib = function
+  | 0 -> 0
+  | 1 -> 1
+  | x -> fib (x-1) + fib (x-2)
+
+
+
+
