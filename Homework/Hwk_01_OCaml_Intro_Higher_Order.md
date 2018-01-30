@@ -162,7 +162,7 @@ into a pair containing the sum and products.  The type of this
 function will be ``int list -> int * int``.
 
 For example,
-+ ``sum_prod [1;2;3]`` evaluates to ``(6,9)``.
++ ``sum_prod [1;2;3]`` evaluates to ``(6,6)``.
 + ``sum_prod []`` evaluates to ``(0,1)``.
 
 
