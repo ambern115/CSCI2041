@@ -171,7 +171,7 @@ For example,
 The most challenging problem in Part 2 is this one.  You are asked to
 write a function named ``split`` with the following type:
 ```
-('a -> bool) -> a list -> 'a list list
+('a -> bool) -> 'a list -> 'a list list
 ```
 
 This function chops up a list into sub-lists using the function
