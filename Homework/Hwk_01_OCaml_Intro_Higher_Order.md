@@ -360,8 +360,7 @@ Hello world!
 
 In this work you may find the functions ``read_file`` and ``implode``
 and your ``split`` function to be useful.  So copy these into
-``formatter.ml``. Only the ``read_file`` and ``implode`` function
-in this part may contain the ``rec`` keyword.
+``formatter.ml``. 
 
 You might also add this function as it may be useful for converting
 the input to ``format`` into a ``char list``:
@@ -373,6 +372,8 @@ let explode (s: string) : char list =
     if i = l then [] else s.[i] :: f (i+1)
   in f 0
 ```
+Only the ``read_file`` and ``explode`` function
+in this part may contain the ``rec`` keyword.
 
 ### Writing ``format``
 
