@@ -16,15 +16,17 @@ determine if an integer input is even or compute the greatest common
 divisor of two positive integers.
 
 Part 2 begins an exploration of higher order functions and
-re-implements common list functions using folds.
+re-implements common list functions using folds. You **cannot** write
+any recursive functions for this part.
 
 Part 3 is based on a word puzzle and computes all possible answers to
 the puzzle given a list of words.  You must use higher order functions
-from the ``List`` module and you cannot write any recursive functions
+from the ``List`` module and you **cannot** write any recursive functions
 for this part.
 
 Part 4 also requires the use of higher order functions to write a
-paragraph formatting function.
+paragraph formatting function. You **cannot** write any recursive functions
+for this part.
 
 Recall that while some labs may be done collaboratively, **this work
 must be done on your own.**
@@ -249,7 +251,8 @@ let read_file (file_name: string) : char list =
   in read_chars ic
 ```
 
-This function will return a list of characters.  Since our output
+This is the only function in this part that may contain the ``rec`` keyword. 
+This function will return a list of characters. Since our output
 requires a list of strings, then you may want to add the following
 function to your file as well:
 ```
@@ -357,7 +360,8 @@ Hello world!
 
 In this work you may find the functions ``read_file`` and ``implode``
 and your ``split`` function to be useful.  So copy these into
-``formatter.ml``.  
+``formatter.ml``. Only the ``read_file`` and ``implode`` function
+in this part may contain the ``rec`` keyword.
 
 You might also add this function as it may be useful for converting
 the input to ``format`` into a ``char list``:
