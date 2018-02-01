@@ -165,7 +165,9 @@ function will be ``int list -> int * int``.
 
 For example,
 + ``sum_prod [1;2;3]`` evaluates to ``(6,6)``.
++ ``sum_prod [1; 2; 3; 4]`` evaluates to ``(10, 24)``.
 + ``sum_prod []`` evaluates to ``(0,1)``.
+ 
 
 
 ### Splitting up a list.
