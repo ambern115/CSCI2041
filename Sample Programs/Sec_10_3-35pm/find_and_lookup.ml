@@ -28,7 +28,26 @@ let rec find_all_with f l =
   | x::xs ->
      let rest = find_all_with f xs
      in if f x then x::rest else rest
-(* cmp :: 'a -> ('b -> bool)  *)
-let find_all_by' cmp elem lst = 
-  find_all_with (cmp elem) lst
+
+
+(* Implementing find_all_by using find_all_with, and
+   implementing find_all_with using find_all_by.
+
+   We can do both - despite what your slides say.
+
+   Here are a few implementations. 
+ *)
+
+let find_all_by' cmp elem lst = find_all_with (cmp elem) lst
+
+let find_all_with' f lst = 
+  let g x y = f y
+  in 
+  find_all_by g "0" lst
+
+let find_all_with'' f lst = 
+  let apply f a = f a 
+  in 
+  find_all_by apply f lst
+
 
