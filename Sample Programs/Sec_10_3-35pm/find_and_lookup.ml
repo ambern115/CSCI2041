@@ -12,8 +12,6 @@ let rec lookup_all s m =
                         ’a list -> ’a list
  *)
 
-let find_all_with' f lst = 
-    let g x y = f y in find_all_by g "ignore" lst
 
 let rec find_all_by cmp elem lst =
   match lst with
@@ -21,6 +19,19 @@ let rec find_all_by cmp elem lst =
   | x::xs -> if cmp elem x 
              then x :: find_all_by cmp elem xs
              else find_all_by cmp elem xs
+
+let find_all_with'' f lst = 
+  let apply f a = f a 
+  in 
+  find_all_by apply f lst
+
+let find_all_with' f lst = 
+  let g a b = f b
+  in 
+  find_all_by g "0" lst
+
+let find_all_with' f lst = 
+    let g x y = f y in find_all_by g "ignore" lst
 
 let rec find_all_with f l =
   match l with
@@ -38,12 +49,9 @@ let rec find_all_with f l =
    Here are a few implementations. 
  *)
 
-let find_all_by' cmp elem lst = find_all_with (cmp elem) lst
+let find_all_by' (cmp : 'a -> 'b -> bool) elem lst =
+ find_all_with (cmp elem) lst
 
-let find_all_with' f lst = 
-  let g x y = f y
-  in 
-  find_all_by g "0" lst
 
 let find_all_with'' f lst = 
   let apply f a = f a 
@@ -51,3 +59,19 @@ let find_all_with'' f lst =
   find_all_by apply f lst
 
 
+
+let rec take_while lst pred =
+  match lst with
+  | [] -> []
+  | x::xs -> if pred x 
+             then x :: take_while xs pred
+             else []
+
+let rec drop_while lst pred =
+  match lst with
+  | [] -> []
+  | x::xs -> if pred x
+             then drop_while xs pred
+             else lst 
+
+let compose f g a = f (g a)
