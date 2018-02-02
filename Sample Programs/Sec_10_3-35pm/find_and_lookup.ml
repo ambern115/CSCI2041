@@ -20,19 +20,6 @@ let rec find_all_by cmp elem lst =
              then x :: find_all_by cmp elem xs
              else find_all_by cmp elem xs
 
-let find_all_with'' f lst = 
-  let apply f a = f a 
-  in 
-  find_all_by apply f lst
-
-let find_all_with' f lst = 
-  let g a b = f b
-  in 
-  find_all_by g "0" lst
-
-let find_all_with' f lst = 
-    let g x y = f y in find_all_by g "ignore" lst
-
 let rec find_all_with f l =
   match l with
   | [] -> []
@@ -53,11 +40,15 @@ let find_all_by' (cmp : 'a -> 'b -> bool) elem lst =
  find_all_with (cmp elem) lst
 
 
+let find_all_with' f lst = 
+  let g a b = f b
+  in 
+  find_all_by g "0" lst
+
 let find_all_with'' f lst = 
   let apply f a = f a 
   in 
   find_all_by apply f lst
-
 
 
 let rec take_while lst pred =
