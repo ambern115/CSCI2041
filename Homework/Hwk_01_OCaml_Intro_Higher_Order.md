@@ -434,8 +434,10 @@ input up into a list of words.  The extra spaces, tabs, and new lines
 are all initially removed.
 
 In your output you should also ensure that there is no extra white
-space. Thus, there should be no space characters at the end of a
-line.
+space. Thus, there should be no space characters at the beginning or 
+end of a line. The function ``String.trim`` from OCaml's String
+library, which removes the leading and trailing whitespace in a given
+string, might be useful in meeting this requirement.
 
 
 To test you solution, you might add the following to your file:
