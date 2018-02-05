@@ -45,3 +45,24 @@ let find_all_with'' f lst =
   find_all_by apply f lst
 
 
+
+let rec take_while lst f =
+  match lst with
+  | [] -> []
+  | x::xs -> if f x
+            then x :: take_while xs f
+            else []
+
+let rec drop_while lst f =
+  match lst with
+  | [] -> []
+  | x::xs -> if f x
+             then drop_while xs f
+             else lst
+
+let flip (f: 'a -> 'b -> 'c) (a: 'a) (b: 'b) = f b a 
+
+(*compose : ('b -> 'c) -> ('a -> 'b) -> ('a -> 'c) *)
+let compose f g x = f (g x)
+let compose' = 
+  fun f -> fun g -> fun x -> f (g x)
