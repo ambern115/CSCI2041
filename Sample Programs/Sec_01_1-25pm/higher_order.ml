@@ -48,9 +48,6 @@ let rec foldr (f: 'a -> 'b -> 'b) (lst: 'a list) (base: 'b) : 'b =
   | [] -> base
   | x::xs -> f x (foldr f xs base)
 
-let rev xs = foldl (fun es e -> e :: es ) [] xs
-
-
 let inc_all_by n xs = 
   (* Note that f refers to n, a values that is not an
      argument to f. *)
