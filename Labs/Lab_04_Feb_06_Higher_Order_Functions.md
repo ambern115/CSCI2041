@@ -50,7 +50,7 @@ Note that ``and`` is a keyword in OCaml, so we use ``andf`` here.
 ``orf: bool list -> bool``
 
 Similar to the function above, but a disjunction (or) instead of a
-conjunction (and).  If there are elements in the list then return
+conjunction (and).  If there are no elements in the list then return
 ``false``. 
 
 We use ``orf`` to match ``andf`` above.
