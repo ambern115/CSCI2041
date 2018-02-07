@@ -10,7 +10,7 @@
 | 12:30pm - 2:30pm | Charlie | Keller Atrium Table 2 |
 | 2:25pm - 3:25pm | Eric | Keller 6-203 | 
 | 3:30pm - 4:30pm | Michael | Keller Atrium Table 4 |
-| 5:30pm - 6:30pm | Shannyn | Keller 4-240 (Sean covering for 1/29) |
+| 5:30pm - 6:30pm | Shannyn | Keller 4-240 |
 
 ### Tuesday
 
