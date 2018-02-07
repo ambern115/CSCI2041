@@ -15,4 +15,5 @@ are as follows:
 1. Programming in OCaml
    - 1: Introduction to OCaml
    - 2: Higher Order Functions
-
+   - 3: Expressions, Values, Evaluation
+   - 4: Inductive Values and Types

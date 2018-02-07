@@ -289,7 +289,10 @@ given file.  You may then want to use ``split`` to group that original
 From here, consider extracting the words of length 4 and 6.
 
 It should then be a matter extracting the appropriate words from the
-list of 6 letter words.
+list of 6 letter words. Clarification: Say you have a 6 letter word 
+named w6, you want to check if the substring of the inner four letters
+(``String.sub (w6 1 4)``) contains a word from the list of 4 letter words. 
+Do this for each 6 letter word, extracting those which contain a 4 letter word.
 
 There are several ways one can go about solving this problem.  It is
 probably wise to consider these steps in some details before you start
