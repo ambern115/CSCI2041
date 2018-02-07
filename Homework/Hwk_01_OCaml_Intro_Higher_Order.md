@@ -360,9 +360,9 @@ Hello world!
 - : unit = ()
 ```
 
-In this work you may find the functions ``read_file`` and ``implode``
-and your ``split`` function to be useful.  So copy these into
-``formatter.ml``. 
+In this work you may find the functions ``implode`` and ``split`` useful. Also
+we will need to test your code using the ``read_file`` function. So copy these 
+into ``formatter.ml``. 
 
 You might also add this function as it may be useful for converting
 the input to ``format`` into a ``char list``:
@@ -407,19 +407,37 @@ Hello world! How are
 you today? I hope
 all is well.
 - : unit = ()
+
+utop # print_endline (format p1 4) ;;
+Hello
+world!
+How
+are
+you
+today?
+I
+hope
+all
+is
+well.
+- : unit = ()
 ```
 
 Notice that the length of ``Hello world!`` is 12 and thus fits on a
 single line when 12 is the paragraph width, but it gets split when the
-paragraph width is set to 11.
+paragraph width is set to 11. When the width is set to 4, which
+is less than the length of ``Hello``, we don't split the single word
+but still keep it in one line.
 
 Your function will need to remove extra white space when splitting the
 input up into a list of words.  The extra spaces, tabs, and new lines
 are all initially removed.
 
 In your output you should also ensure that there is no extra white
-space.  Thus, there should be no space characters at the end of a
-line.
+space. Thus, there should be no space characters at the beginning or 
+end of a line. The function ``String.trim`` from OCaml's String
+library, which removes the leading and trailing whitespace in a given
+string, might be useful in meeting this requirement.
 
 
 To test you solution, you might add the following to your file:
