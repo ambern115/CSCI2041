@@ -388,6 +388,9 @@ integer.
 
 Here are some sample interactions to illustrate this:
 ```
+utop # format p1 12 ;;
+- : string = "Hello world!\nHow are you\ntoday? I\nhope all is\nwell."
+
 utop # print_endline (format p1 12) ;;
 Hello world!
 How are you
@@ -395,6 +398,9 @@ today? I
 hope all is
 well.
 - : unit = ()
+
+utop # format p1 11 ;;
+- : string = "Hello\nworld! How\nare you\ntoday? I\nhope all is\nwell."
 
 utop # print_endline (format p1 11) ;;
 Hello
@@ -405,11 +411,17 @@ hope all is
 well.
 - : unit = ()
 
+utop # format p1 20 ;;
+- : string = "Hello world! How are\nyou today? I hope\nall is well."
+
 utop # print_endline (format p1 20) ;;
 Hello world! How are
 you today? I hope
 all is well.
 - : unit = ()
+
+utop # format p1 4 ;;
+- : string = "Hello\nworld!\nHow\nare\nyou\ntoday?\nI\nhope\nall\nis\nwell."
 
 utop # print_endline (format p1 4) ;;
 Hello
