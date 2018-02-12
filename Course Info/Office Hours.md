@@ -5,7 +5,7 @@
 | When | Who | Where |
 | ---- | --- | ----- |
 | 9:00am - 10:00am | Sean | Keller 2-209 |
-| 10:10am - 11:00am | Julia | Keller Atrium Table 5 |
+| 10:10am - 11:00am | Julia | Keller Atrium Table 5 (02/12 – Charlie) |
 | 11:30am - 12:30pm | Violet | Keller Atrium Table 5 |
 | 12:30pm - 2:30pm | Charlie | Keller Atrium Table 2 |
 | 2:25pm - 3:25pm | Eric | Keller 6-203 | 
@@ -52,6 +52,6 @@
 | ---- | --- | ----- |
 | 9:00am - 10:00am | Charlie | Keller Atrium Table 2 |
 | 10:00am - 11:00am | Rui | Keller Atrium Table 1 |
-| 12:30pm - 1:30pm | Julia | Keller Atrium Table 4 |
+| 12:30pm - 1:30pm | Julia | Keller Atrium Table 4 (02/16 – Nathan R.)|
 | 2:25pm - 3:25pm | Eric | Keller 6-203 | 
 | 5:00pm - 6:00pm | Mitchell | Keller 1-260 |
