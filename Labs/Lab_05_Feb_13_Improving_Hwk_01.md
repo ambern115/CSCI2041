@@ -131,3 +131,5 @@ it can help your solution.
 Your work on this lab is assessed by the final quality of your code
 and the absence of more of the above mentioned opportunities for
 further improvement in 2 of the 3 functions of interest.
+
+As always, **push your work to GitHub**.
