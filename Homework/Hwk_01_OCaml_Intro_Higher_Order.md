@@ -2,7 +2,7 @@
 
 *CSci 2041: Advanced Programming Principles, Spring 2018*
 
-**Due:** Monday, February 12, at 12:00pm
+**Due:** Monday, February 12, at 11:59pm
 
 All Feedback tests for this homework are active.
 
