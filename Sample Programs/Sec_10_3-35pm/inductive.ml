@@ -36,3 +36,61 @@ let area s =
   | Circ ( (_,_), r ) -> 3.1415 *. r *. r
   | Tri _ -> 45.0
 
+type 'a maybe = Nothing | Just of 'a 
+
+let divide n d =
+  if d = 0
+  then Nothing
+  else Just (n / d)
+
+let listHd lst = 
+  match lst with
+  | [] -> None
+  | x::_ -> Some x 
+
+type 'a myList = Nil | Cons of 'a * 'a myList 
+type intList = IntNil | IntCons of int * intList
+
+type ('a, 'b) dictionary = ('a * 'b) list
+
+let l1 = Nil
+let l2 = Cons (1, Cons (2, Cons (3, Nil)))
+
+let rec sumList lst =
+  match lst with
+  | Nil -> 0
+  | Cons(h,t) -> h + sumList t
+
+type 'a btree = Empty 
+              | Node of 'a * 'a btree * 'a btree
+
+let treeAmin = Node (1, Node(2, Empty, Empty), Node(3, Empty, Empty))
+
+let rec sumTree t =
+  match t with
+  | Empty -> 0
+  | Node (a, left, right) -> a + sumTree left + sumTree right
+
+let tstr = Node ("a", Node ("Hello", Empty, Empty),
+                 Node("Why?", Empty, Empty) )
+let rec concatTree (t: string btree) : string =
+  match t with
+  | Empty -> ""
+  | Node (a, left, right) -> concatTree left ^ a ^ concatTree right
+
+let rec treeMap (f: 'a -> 'b) (t: 'a btree) : 'b btree =
+  match t with
+  | Empty -> Empty
+  | Node(a, left, right) -> 
+     Node (f a, treeMap f left, treeMap f right)
+
+let add (x: int) (y :int) : int = x + y 
+
+let rec treeFold (f : 'a -> 'b -> 'b -> 'b) (base: 'b)
+                 (t :'a btree) : 'b = 
+  match t with
+  | Empty -> base
+  | Node (a, left, right) -> f a
+                               (treeFold f base left)
+                               (treeFold f base right)
+                 
