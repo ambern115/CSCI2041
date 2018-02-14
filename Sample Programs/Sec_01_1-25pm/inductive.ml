@@ -30,3 +30,40 @@ let area (s: shape) : float =
   | Circle ( _, r ) -> 3.1415 *. r *. r
   | _ -> 45.0
 
+
+
+type 'a maybe = Nothing | Just of 'a
+
+let mysqrt x = 
+  if x < 0.0 then Nothing
+  else Just (sqrt x )
+
+
+let listHd : 'a list -> 'a option = function
+  | [] -> None
+  | hd::_ -> Some hd
+
+
+type 'a myList = Nil | Cons of 'a * 'a myList
+
+let empytlist = Nil
+let alist = Cons ( 3, Cons ( 2, Cons ( 1, Nil ) ) ) 
+
+let rec sumMyList (lst: int myList) : int   =
+  match lst with
+  | Nil -> 0
+  | Cons(x, xs) -> x + sumMyList xs
+
+type 'a btree = Empty
+              | Node of 'a * 'a btree * 'a btree
+
+let t7 = Node ( 7, Empty, Empty )
+let t13 = Node ( 13, Empty, Empty )
+let t10 = Node ( 10, t7, t13 )
+
+let t = Node (10, Node (7, Empty, Empty), Node (13, Empty, Empty))
+
+let rec sumTree t = 
+  match t with
+  | Empty -> 0 
+  | Node (x, l, r) -> x + sumTree l + sumTree r
