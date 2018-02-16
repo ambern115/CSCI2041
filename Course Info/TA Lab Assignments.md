@@ -1,5 +1,19 @@
 # TA Lab Assignments
 
+## Determing you "graduate TA"
+| Lab | Time    | Room  | Grad TA |
+| --- | ------- | ----- | --- |
+| 2   |  8:00am | 1-250 | Sean Geronimo Anderson |
+| 3   |  9:05am | 1-250 | Sean Geronimo Anderson |
+| 4   | 10:10am | 1-250 | Sean Geronimo Anderson |
+| 5   | 11:15am | 1-250 | Duanyang Jing |
+| 6   | 12:20pm | 1-250 | Duanyang Jing |
+| 7   |  1:25pm | 1-250 | Sean Geronimo Anderson |
+| 8   |  2:30pm | 1-250 | Mary Southern |
+| 11  |  3:25pm | 1-250 | Mary Southern |
+| 12  |  4:40pm | 1-250 | Mary Southern |
+| 13  |  4:40pm | 1-260 | Duanyang Jing |
+
 ## By TA
 
 | TA | Labs |
