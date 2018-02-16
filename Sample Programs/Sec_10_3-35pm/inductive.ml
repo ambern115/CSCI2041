@@ -84,7 +84,15 @@ let rec treeMap (f: 'a -> 'b) (t: 'a btree) : 'b btree =
   | Node(a, left, right) -> 
      Node (f a, treeMap f left, treeMap f right)
 
+(* folding up tree 
+   - left - "accumulate"
+   - right - "reduce" - 
+      - replacing data constructors with functions
+         and then reducing the resulting expression
 
+ *)
+
+(* Node: 'a -> 'a btree -> 'a btree -> 'a btree *)
 let rec treeFold (f : 'a -> 'b -> 'b -> 'b) (base: 'b)
                  (t :'a btree) : 'b = 
   match t with
@@ -96,3 +104,28 @@ let rec treeFold (f : 'a -> 'b -> 'b -> 'b) (base: 'b)
 let add3 (x: int) (y :int) (z: int) : int = x + y + z
 
 let a_sum = treeFold add3 0 treeAmin                 
+
+let rec treeFoldLeft (f : 'a -> 'b -> 'b) (accum: 'b)
+                     (t :'a btree) : 'b = 
+  match t with 
+  | Empty -> accum 
+  | Node (a, left, right) ->
+     let step1 = f a accum
+     in
+     let step2 = treeFoldLeft f step1 left
+     in
+     treeFoldLeft f step2 right
+
+let sumLeft (t: int btree) : int = 
+  let f elem accum = elem + accum
+  in
+  let accum = 0
+  in
+  treeFoldLeft f accum t
+
+let toPreOrderList (t: 'a btree) : 'a list = 
+  let f elem accum = elem :: accum
+  in
+  let accum = []
+  in
+  List.rev (treeFoldLeft f accum t)

@@ -67,3 +67,36 @@ let rec sumTree t =
   match t with
   | Empty -> 0 
   | Node (x, l, r) -> x + sumTree l + sumTree r
+
+let rec isElem (t: 'a btree) (elem: 'a) : bool =
+  match t with
+  | Empty -> false
+  | Node (e, tl, tr) -> elem = e || isElem tl elem || isElem tr elem
+
+let rec inc100 (t: int btree) : int btree =
+  match t with
+  | Empty -> Empty
+  | Node (e, tl ,tr) -> Node (e + 100, inc100 tl, inc100 tr) 
+
+let rec treeMap (f: 'a -> 'b) (t: 'a btree) : 'b btree =
+  match t with
+  | Empty -> Empty
+  | Node (e, tl, tr) -> Node (f e, treeMap f tl, treeMap f tr)
+
+(* fold functions for tree? 
+   left - "accumulate" 
+   right - "reduce"
+ *)
+
+let rec treeReduce (f: 'a -> 'b -> 'b -> 'b) (base: 'b) (t: 'a btree) : 'b =
+  match t with
+  | Empty -> base
+  | Node (e, tl, tr) -> f e (treeReduce f base tl)
+                            (treeReduce f base tr)
+
+let add3 x y z = x + y + z
+
+let tstr = Node ("a", Node ("Hello", Empty, Empty),
+                 Node("Why?", Empty, Empty) )
+
+let concat3ints x s1 s2 = string_of_int x ^ s1 ^ s2
