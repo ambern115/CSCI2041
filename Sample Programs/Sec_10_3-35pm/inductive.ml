@@ -84,7 +84,6 @@ let rec treeMap (f: 'a -> 'b) (t: 'a btree) : 'b btree =
   | Node(a, left, right) -> 
      Node (f a, treeMap f left, treeMap f right)
 
-let add (x: int) (y :int) : int = x + y 
 
 let rec treeFold (f : 'a -> 'b -> 'b -> 'b) (base: 'b)
                  (t :'a btree) : 'b = 
@@ -93,4 +92,7 @@ let rec treeFold (f : 'a -> 'b -> 'b -> 'b) (base: 'b)
   | Node (a, left, right) -> f a
                                (treeFold f base left)
                                (treeFold f base right)
-                 
+
+let add3 (x: int) (y :int) (z: int) : int = x + y + z
+
+let a_sum = treeFold add3 0 treeAmin                 
