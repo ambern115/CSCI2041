@@ -1,6 +1,6 @@
 # TA Lab Assignments
 
-## Determing you "graduate TA"
+## Determining Your Graduate TA
 | Lab | Time    | Room  | Grad TA |
 | --- | ------- | ----- | --- |
 | 2   |  8:00am | 1-250 | Sean Geronimo Anderson |
