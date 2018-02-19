@@ -4,7 +4,7 @@
 
 **Due:** Friday, March 2, at 5:00 PM.
 
-**Changelog**
+**Changelog:**
 + Monday, February 19: (Sean) **`btf_insert_by`** now emphasizes the
 word _comment_, and explicitly states that you need not write
 a `btf_insert_by` function; Added "Introduction" heading to introduction.
