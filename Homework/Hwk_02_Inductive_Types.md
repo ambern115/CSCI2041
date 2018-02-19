@@ -2,7 +2,14 @@
 
 *CSci 2041: Advanced Programming Principles, Spring 2018*
 
-**Due:** Friday, March 2, at 5:00 PM.    
+**Due:** Friday, March 2, at 5:00 PM.
+
+**Changelog**
++ Monday, February 19: (Sean) **`btf_insert_by`** now emphasizes the
+word _comment_, and explicitly states that you need not write
+a `btf_insert_by` function; Added "Introduction" heading to introduction.
+
+## Introduction
 
 This homework will focus on tree-based inductive data types and on
 functions for working with them.
@@ -74,7 +81,12 @@ type and handle those cases.
 
 An example: 
 ```
-let t5 : string option tree = Fork (Some "a", Leaf (Some "b"), Fork (Some "c", Leaf None, Leaf (Some "d")))
+let t5 : string option tree =
+  Fork (Some "a",
+        Leaf (Some "b"),
+        Fork (Some "c",
+              Leaf None,
+              Leaf (Some "d")))
 ```
 This is a tree of type ``string option tree``. More examples:
 ```
@@ -213,7 +225,7 @@ Like ``tfold``, now create a function ``btfold`` of type ``'b ->
 
 #### ``btf_elem_by``
 
-Write ``btf_elem_by`` so that it has the same behavior as
+Write a function named ``btf_elem_by`` so that it has the same behavior as
 ``bt_elem_by`` that you wrote above, but this one must not be recursive
 and must instead use ``btfold``.
 
@@ -221,10 +233,12 @@ and must instead use ``btfold``.
 
 Similarly, write a new function named ``btf_to_list`` that has the
 same behavior as your ``bt_to_list`` function that you wrote above.
-But now use ``btfold`` instead without recursion. Call this function
-``btf_to_list``.
+But now use ``btfold`` and no recursion.
 
-#### "``btf_insert_by``"
+#### ``btf_insert_by``
 
-Finally, write a comment on why using ``btfold`` for creating a
-function like ``bt_insert_by`` might be difficult.
+Finally, write a _comment_ on why using ``btfold`` for creating a
+function like ``bt_insert_by`` might be difficult. (You need not
+write the ``btf_insert_by`` function.) You may join a Canvas
+discussion on this topic
+[here](https://canvas.umn.edu/courses/39626/discussion_topics/79650).
