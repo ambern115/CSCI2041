@@ -1,3 +1,6 @@
+(* Notes from Feb 21, based on discussion of material and slides from
+   section S.2 on Reasoning about Program Correctness *)
+
 let rec sum = function
 | [] -> 0
 | x::xs -> x + sum xs
@@ -83,29 +86,3 @@ givev: reverse (xs @ l2) = reverse l2 @ reverse xs
   by def of @
 = reverse l2 @ reverse (x::xs)
   by def. of reverse
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let rec euclid m n =
-  if m = n then m
-  else
-    if m < n
-    then euclid m (n-m)
-    else euclid (m-n) n
-
-gcd m n = gcd m (n−m) if n>m 
-gcd m n = gcd (m−n) n if m>n
-gcd m n = m           if m=n

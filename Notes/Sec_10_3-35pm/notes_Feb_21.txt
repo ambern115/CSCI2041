@@ -1,3 +1,6 @@
+(* Notes from Feb 21, based on discussion of material and slides from
+   section S.2 on Reasoning about Program Correctness *)
+
 let rec sum = function
 | [] -> 0
 | x::xs -> x + sum xs
