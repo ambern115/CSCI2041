@@ -17,3 +17,7 @@ are as follows:
    - 2: Higher Order Functions
    - 3: Expressions, Values, Evaluation
    - 4: Inductive Values and Types
+
+2. Reasoning about Correctness
+
+3. Programs as Data.  Representation and evaluation of programs.
