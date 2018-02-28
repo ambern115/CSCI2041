@@ -1,4 +1,5 @@
 # Lab 7: Practice reasoning about correctness problems
+[comment]: ---------------------------------------------------------------79->|
 
 *CSci 2041: Advanced Programming Principles, Spring 2018*
 
@@ -6,9 +7,13 @@ In today's lab you have 2 practice problems to work on.  These are
 similar to the problems in Homework 3.  There is also some advice at
 the end of this document that may be useful in completing Homework 3.
 
+**Changelog:**
++ Wednesday, February 28: (Sean) **Problem 2** has two new sub-headings with
+sample quiz questions and a high-scoring reference solution (as if it were a
+quiz problem).
 
 
-## Problem 1 Length of lists
+## Problem 1: Length of lists
 
 Consider the following function over lists:
 ```
@@ -37,7 +42,7 @@ provides in the proof.
 Each step in your proof must be accompanied by a justification
 describing why that step could be taken.
 
-## Problem 2 List length and reverse
+## Problem 2: List length and reverse
 
 Recall our function for reversing a list:
 ```
@@ -51,7 +56,7 @@ Using induction show that
    length (reverse l) = length l
 ```
 
-Your proof may refer to the definition of ``length``` in the previous
+Your proof may refer to the definition of ``length`` in the previous
 problem.  Your proof must explicitly and clearly indicate the base
 case you prove, the inductive case you prove and what the inductive
 hypothesis provides in the proof.
@@ -59,6 +64,88 @@ hypothesis provides in the proof.
 Each step in your proof must be accompanied by a justification
 describing why that step could be taken.
 
+### Problem 2 sample quiz questions
+If problem 2 appeared on a quiz, the above definition would appear on the quiz
+and several questions would lead you through an inductive proof. Here are the
+questions:
+
+1. What is the principle of induction on lists that you will need to complete
+the proof?
+
+2. What is the _base_ case you must prove?
+
+3. Prove the base case. In your proof, each step much have a justification.
+
+4. What is the _inductive_ case you must prove?
+
+5. In the inductive case, what is the inductive hypothesis?
+
+6. Prove the inductive case. Each step in your proof must include a
+justification.
+
+Try answering the above questions in your head before moving on.
+
+### Problem 2 high-scoring reference solution
+[comment]: ---------------------------------------------------------------79->|
+Here is a reference solution for the above question set. If problem 2 (or
+similar) appeared on a quiz and a student gave an answer with this structure,
+the student would receive a substantial portion of the points.
+
+_Following this structure means you've learned it and are able to follow it.
+This is what we want you to demonstrate._
+
+Here are the questions again, with high-scoring reference answers:
+
+1. What is the principle of induction on lists that you will need to complete
+the proof?
+
+> **Solution:**
+```
+∀x, P(x) holds if P([]) holds and P(t) ⇒ P(h :: t)
+```
+
+2. What is the _base_ case you must prove?
+
+> **Solution:**
+```
+length (reverse []) = length []
+```
+
+3. Prove the base case. In your proof, each step much have a justification.
+
+> **Solution:**
+```
+  length (reverse [])
+= length [], by def of reverse
+```
+
+4. What is the _inductive_ case you must prove?
+
+> **Solution:**
+```
+length (reverse (x::xs)) = length (x::xs)
+```
+
+5. In the inductive case, what is the inductive hypothesis?
+
+> **Solution:**
+```
+length (reverse xs) = length xs
+```
+
+6. Prove the inductive case. Each step in your proof must include a
+justification.
+
+> **Solution:**
+```
+  length (reverse (x::xs))
+= length (reverse xs @ [x]),        by def of reverse
+= length (reverse xs) + length [x], by properties of length proven in problem 1
+= length xs + length [x],           by induction hyp
+= length [x] + length xs,           by commutativity (addition)
+= length ([x] @ xs),                by properties of length
+= length (x::xs),                   by properties of @
+```
 
 ## Writing and using lemmas
 
