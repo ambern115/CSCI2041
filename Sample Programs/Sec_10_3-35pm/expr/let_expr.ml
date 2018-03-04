@@ -1,3 +1,7 @@
+(* This file was originally named "let_expr.ml" but was renamed
+   to fit the file naming scheme of Hwk 04.
+ *)
+
 type expr = Int of int
           | Add of expr * expr
           | Sub of expr * expr
