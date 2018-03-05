@@ -21,3 +21,9 @@ are as follows:
 2. Reasoning about Correctness
 
 3. Programs as Data.  Representation and evaluation of programs.
+
+4. Expression Evaluation
+   - 1: Lazy and Eager Evaluation
+
+5. Effects
+   - 1. Imperative OCaml Programming
