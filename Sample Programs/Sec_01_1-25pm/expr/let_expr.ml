@@ -1,3 +1,6 @@
+(* This file was originally named "let_expr.ml" but was renamed
+   to fit the file naming scheme of Hwk 04.
+ *)
 
 type expr = Plus of expr * expr 
           | Mult of expr * expr
