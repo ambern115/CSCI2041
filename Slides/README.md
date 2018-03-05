@@ -26,4 +26,4 @@ are as follows:
    - 1: Lazy and Eager Evaluation
 
 5. Effects
-   - 1. Imperative OCaml Programming
+   - 1: Imperative OCaml Programming
