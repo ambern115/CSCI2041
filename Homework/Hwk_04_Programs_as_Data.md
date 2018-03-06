@@ -155,7 +155,7 @@ and let OCaml evaluate the expressions.
 
 For example, typing
 ```
-print_endline (serialize (Lambda ("n", Add (Id "n", Val (Int 1)))));;
+print_endline (unparse (App (Lambda ("n", Add (Id "n", Val (Int 1))), Val (Int 4))));;
 ```
 should yield
 ```
