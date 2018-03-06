@@ -20,6 +20,9 @@ Step 6, recursive functions, changed ``sumToN`` references to ``sumTo``
 to match the example; Corrected example in Part 2, type inference,
 to be "2 * (3 + (4 < 5))" (instead of "2 * (3 + (4 < 5)0").
 
++ Tuesday, March 6: (Yuze Jiang, via Eric), fixed error in example evaluation
+  for the `unparse` function.
+  
 # Writing transparent code
 
 We have discussed the importance of writing code in a manner that
