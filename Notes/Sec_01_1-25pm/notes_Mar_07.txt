@@ -1,0 +1,28 @@
+Exercise #2:
+Using call-by-value evaluation and then lazy evaluation, write out the
+first 10 steps of the evaluation of the following:
+
+take 2 (makefrom 4 5)
+
+Use the following definitions (clearly not OCaml syntax):
+
+   take n [] = []
+   take 0 (x::xs) = []
+   take n (x::xs) = x::take (n-1) xs
+
+   makefrom 0 v = []
+   makefrom n v = v :: makefrom (n-1) (v+1)
+
+
+
+Exercise #4:
+Evaluate the first dozen steps or so of the following:
+
+sum (take 3 (squares from 1))
+
+where
+
+   sum [] = 0
+   sum x::xs -> x + sum xs
+
+   squares from v = v*v :: squares from (v+1)
