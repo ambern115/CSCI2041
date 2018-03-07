@@ -124,7 +124,8 @@ generating valid OCaml code.
 
 Your ``serialize`` function should compute EXACTLY the string that
 OCaml displays in the utop environment when it displays the value of
-an ``expr``.
+an ``expr``.  The only distinction can be the newlines and indentation
+that OCaml will add.  So white-space will not matter in checking this.
 
 Note that your function should only serialize values constructed by
 ``Int`` or ``Bool``.  Raise a ``Failure`` exception stating
