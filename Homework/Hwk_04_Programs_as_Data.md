@@ -14,6 +14,18 @@ also used in production implementation of mainstream programming
 languages.
 
 
+**Change log:**
++ Monday, March 5: (Sean) In Part 1, expression evaluation,
+Step 6, recursive functions, changed ``sumToN`` references to ``sumTo``
+to match the example; Corrected example in Part 2, type inference,
+to be "2 * (3 + (4 < 5))" (instead of "2 * (3 + (4 < 5)0").
+
++ Tuesday, March 6: (Yuze Jiang, via Eric), fixed error in example evaluation
+  for the `unparse` function.
+  
++ Wednesday, March 7: (Eric), fixed some awkward wording description of type 
+  inference for the ``Eq`` expression form.
+
 # Writing transparent code
 
 We have discussed the importance of writing code in a manner that
@@ -112,7 +124,8 @@ generating valid OCaml code.
 
 Your ``serialize`` function should compute EXACTLY the string that
 OCaml displays in the utop environment when it displays the value of
-an ``expr``.
+an ``expr``.  The only distinction can be the newlines and indentation
+that OCaml will add.  So white-space will not matter in checking this.
 
 Note that your function should only serialize values constructed by
 ``Int`` or ``Bool``.  Raise a ``Failure`` exception stating
@@ -131,9 +144,9 @@ unparse (Add (Val (Int 1), Mul (Val (Int 2), Val (Int 3))))
 ```
 should evaluate to
 ```
-(1 + (2 * 3))
+"(1 + (2 * 3))"
 ```
-Notice that ``unparse`` generates more parenthesis than are needed.
+Notice that ``unparse`` generates more parentheses than are needed.
 This simplifies the implementation of ``unparse``.
 
 Your function should generate output that you can copy and paste into
@@ -149,7 +162,7 @@ and let OCaml evaluate the expressions.
 
 For example, typing
 ```
-print_endline (serialize (Lambda ("n", Add (Id "n", Val (Int 1)))));;
+print_endline (unparse (App (Lambda ("n", Add (Id "n", Val (Int 1))), Val (Int 4))));;
 ```
 should yield
 ```
@@ -295,11 +308,11 @@ let sumTo_expr : expr =
             Id "sumTo"
            )
 ```
-Here we've given the name ``sumToN_expr`` to the ``expr`` value that
-represent our ``sumToN`` function.
+Here we've given the name ``sumTo_expr`` to the ``expr`` value that
+represent our ``sumTo`` function.
 
 Thus,
-+ ``evaluate (App (sumToN_expr, Val (Int 10)))``
++ ``evaluate (App (sumTo_expr, Val (Int 10)))``
   evaluates to ``Int 55``
 
 
@@ -353,7 +366,7 @@ type error =
 
 Our simple language only has values of that are either of type
 ``IntType`` or ``BoolType``.  When errors are reported they are one of
-the three possible errors indicated by the three constructors.
+the three possible errors indicated by the three constructors:
 
 1. When an identifier is not found in the environment, a
    ``UnboundName`` error is created.
@@ -440,7 +453,7 @@ errors indicate that the expression does not have a type.
 
 The principle here is that an expression can only be ascribed a type
 if all of its sub-expressions can be given a type.  Thus an expression
-such as "2 * (3 + (4 < 5)0" does not "have a type" because the
+such as "2 * (3 + (4 < 5))" does not "have a type" because the
 addition sub-expression is erroneous.
 
 For this function, the ``Err`` constructor may be used with multiple
@@ -489,9 +502,10 @@ should produce the result ``OK IntType``.
 The equality construct ``Eq`` works on integers and Boolean values,
 some additional care must be taken here.  If the first argument has
 type ``IntType`` then the second one must as well.  If the first
-argument does not have a type, then we need the second one must be
+argument does not have a type (that is, there is some error), 
+then we can still check that the second one has
 either an ``IntType`` or a ``BoolType``.  Here, these are the only two
-options.  When we add function types in a later problem, this we
+options.  When we add function types in a later problem, this will
 become a concern.
 
 Let-expressions should first check the binding expression for errors.
