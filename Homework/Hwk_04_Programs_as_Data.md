@@ -140,7 +140,7 @@ unparse (Add (Val (Int 1), Mul (Val (Int 2), Val (Int 3))))
 ```
 should evaluate to
 ```
-(1 + (2 * 3))
+"(1 + (2 * 3))"
 ```
 Notice that ``unparse`` generates more parentheses than are needed.
 This simplifies the implementation of ``unparse``.
