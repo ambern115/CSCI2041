@@ -23,6 +23,9 @@ to be "2 * (3 + (4 < 5))" (instead of "2 * (3 + (4 < 5)0").
 + Tuesday, March 6: (Yuze Jiang, via Eric), fixed error in example evaluation
   for the `unparse` function.
   
++ Wednesday, March 7: (Eric), fixed some awkward wording description of type 
+  inference for the ``Eq`` expression form.
+
 # Writing transparent code
 
 We have discussed the importance of writing code in a manner that
@@ -498,7 +501,8 @@ should produce the result ``OK IntType``.
 The equality construct ``Eq`` works on integers and Boolean values,
 some additional care must be taken here.  If the first argument has
 type ``IntType`` then the second one must as well.  If the first
-argument does not have a type, then we need the second one must be
+argument does not have a type (that is, there is some error), 
+then we can still check that the second one has
 either an ``IntType`` or a ``BoolType``.  Here, these are the only two
 options.  When we add function types in a later problem, this will
 become a concern.
