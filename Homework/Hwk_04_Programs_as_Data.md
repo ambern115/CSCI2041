@@ -27,7 +27,10 @@ to be "2 * (3 + (4 < 5))" (instead of "2 * (3 + (4 < 5)0").
   inference for the ``Eq`` expression form.
   
 + Thursday, March 8: (Duanyang), fixed typo in the type of ``get_type`` , changed 
-  from ``value -> type`` to ``value -> typ``
+  from ``value -> type`` to ``value -> typ``.
+  
++ Friday, March 9: (Duanyang), In Part 1 Step 6, recursive functions, changed 
+  ``sumTo`` to match definition given in ``expr_functions.ml``.
 
 # Writing transparent code
 
@@ -291,31 +294,31 @@ we'd write this function as follows:
 ```
 let rec sumTo = fun n ->
       if n = 0 then 0 else n + sumTo (n-1)
-in sumTo 4
+in sumTo
 ```
 To represent this function in our mini-OCaml language defined by the
 ``expr`` type, we'd represent the function as follows:
 ```
-let sumTo_expr : expr =
-    LetRec ("sumTo", 
+let sumToN : expr =
+    LetRec ("sumToN", 
             Lambda ("n", 
                     If (Eq (Id "n", Val (Int 0)),
                         Val (Int 0),
                         Add (Id "n", 
-                             App (Id "sumTo", 
+                             App (Id "sumToN", 
                                   Sub (Id "n", Val (Int 1))
                                  )
                             )
                        )
                    ),
-            Id "sumTo"
+            Id "sumToN"
            )
 ```
-Here we've given the name ``sumTo_expr`` to the ``expr`` value that
+Here we've given the name ``sumToN`` to the ``expr`` value that
 represent our ``sumTo`` function.
 
 Thus,
-+ ``evaluate (App (sumTo_expr, Val (Int 10)))``
++ ``evaluate (App (sumToN, Val (Int 10)))``
   evaluates to ``Int 55``
 
 
