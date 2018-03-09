@@ -30,3 +30,13 @@ let rec from n =
 
 let nats = from 1
 
+let head (s: 'a stream) : 'a = match s with
+  | Cons (v, _) -> v
+
+let tail (s: 'a stream) : 'a stream = match s with
+  | Cons (_, tl) -> demand tl
+
+let rec take (n:int) (s : 'a stream) : ('a list) =
+ match n, s with
+ | 0, _ -> []
+ | _, Cons (v, tl) -> v :: take (n-1) (demand tl)
