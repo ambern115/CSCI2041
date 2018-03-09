@@ -15,9 +15,7 @@ languages.
 
 
 **Change log:**
-+ Monday, March 5: (Sean) In Part 1, expression evaluation,
-Step 6, recursive functions, changed ``sumToN`` references to ``sumTo``
-to match the example; Corrected example in Part 2, type inference,
++ Monday, March 5: (Sean), corrected example in Part 2, type inference,
 to be "2 * (3 + (4 < 5))" (instead of "2 * (3 + (4 < 5)0").
 
 + Tuesday, March 6: (Yuze Jiang, via Eric), fixed error in example evaluation
