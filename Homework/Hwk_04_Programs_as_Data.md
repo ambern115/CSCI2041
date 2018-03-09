@@ -25,6 +25,9 @@ to be "2 * (3 + (4 < 5))" (instead of "2 * (3 + (4 < 5)0").
   
 + Wednesday, March 7: (Eric), fixed some awkward wording description of type 
   inference for the ``Eq`` expression form.
+  
++ Thursday, March 8: (Duanyang), fixed typo in the type of ``get_type`` , changed 
+  from ``value -> type`` to ``value -> typ``
 
 # Writing transparent code
 
@@ -414,7 +417,7 @@ indicate that the second expression was expected to have a type of
 second is expected to have type ``BoolType``.
 
 You should also write a function named ``get_type`` of type ``value ->
-type`` useful in generating error messages and in later parts of this
+typ`` useful in generating error messages and in later parts of this
 assignment. 
 
 
