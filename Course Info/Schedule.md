@@ -66,10 +66,15 @@
   - Quiz 6
   
 ### Week  8 - Mar  5
+- M, Mar  5, Lec: Programs as Data (S3), closures
+- T, Mar  6, Lab 8: Questions and discussion of Hwk 3 and 4.
+- W, Mar  7, Lec: Lazy Evaluation (S4.1)
+- F, Mar  9, Lec: Lazy Evaluation (S4.1)
 
 ### Break - Mar 12
 
 ### Week  9 - Mar 19
+
 
 ### Week 10 - Mar 26
 
