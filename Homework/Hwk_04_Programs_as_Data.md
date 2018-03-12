@@ -30,6 +30,8 @@ to be "2 * (3 + (4 < 5))" (instead of "2 * (3 + (4 < 5)0").
 + Friday, March 9: (Duanyang), In Part 1 Step 6, recursive functions, changed 
   ``sumTo`` to match definition given in ``expr_functions.ml``.
 
++ Monday, March 12: (Duanyang), added clarification to ``unparse``
+
 # Writing transparent code
 
 We have discussed the importance of writing code in a manner that
@@ -121,7 +123,7 @@ Lambda ("n", Add (Id "n", Val (Int 1)))
 - : unit = ()
 ```
 
-You cannot copy the ``Lambda...`` line above and paste it into utop.
+You ~~cannot~~ can copy the ``Lambda...`` line above and paste it into utop.
 This will be an easy way to check that your ``serialize`` function is
 generating valid OCaml code.
 
@@ -159,24 +161,36 @@ the OCaml interpreter (in utop) to **compute the value** of the expression.
 By copying the output ``(1 + (2 * 3))`` from above, OCaml will display
 ``7``.
 
-You need to handle quotes in a manner similar to in ``serialize``.
+~~You need to handle quotes in a manner similar to in ``serialize``.~~
+Constructs such as ``Lambda`` and ``Let`` that have ``string``
+components will need to generate the actual name without double quotes
+in the resulting string.
 
+For example,
+```
+unparse (Lambda ("n", Add(Id "n", Val (Int 1))))
+```
+should evaluate to
+```
+"(fun n -> (n + 1))"
+```
 To test your function, you can copy and paste your output into utop
-and let OCaml evaluate the expressions.
+and let OCaml evaluate the expressions. For example, you can paste
+the output ``(fun n -> (n + 1))`` in utop and you should get a function of type
+``int -> int``.
 
-For example, typing
+For another example,
 ```
-print_endline (unparse (App (Lambda ("n", Add (Id "n", Val (Int 1))), Val (Int 4))));;
+unparse (App (Lambda ("n", Add (Id "n", Val (Int 1))), Val (Int 4)))
 ```
-should yield
+should evaluate to
 ```
-((fun n -> (n + 1)) 4)
-- : unit = ()
+"((fun n -> (n + 1)) 4)"
 ```
-in utop.  If you paste ``((fun n -> (n + 1)) 4)`` into utop, you
+If you paste ``((fun n -> (n + 1)) 4)`` into utop, you
 should get the value ``5``.
 
-Note that your function should only serialize values constructed by
+Note that your function should only ~~serialize~~ unparse values constructed by
 ``Int`` or ``Bool``.  Raise a ``Failure`` exception stating
 ``"Will only unparse integer and Boolean values"``.
 
@@ -553,7 +567,9 @@ should satisfy it.
 
 # Part 3: Type checking the full language
 
-This specification will appear soon - by March 6 at the latest.  When
-it is ready and announcement on Canvas will be sent.
+~~This specification will appear soon - by March 6 at the latest.  When
+it is ready and announcement on Canvas will be sent.~~
+This part is now partial credit.
+You can find it [here](../Hwk_04_Programs_as_Data_Extra_Credit.md).
 
 
