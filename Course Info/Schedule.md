@@ -62,7 +62,9 @@
 - M, Feb 26, Lec: Programs as Data (S3), introduction
 - T, Feb 27, Lab 7: Questions and discussion of correctness proofs
 - W, Feb 28, Lec: Programs as Data (S3), extending the simple language
-
+- F, Mar 02, Lec: Programs as Data (S3), closures
+  - Quiz 6
+  
 ### Week  8 - Mar  5
 
 ### Break - Mar 12
