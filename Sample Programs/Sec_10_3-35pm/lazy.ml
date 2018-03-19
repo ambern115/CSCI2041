@@ -43,3 +43,58 @@ let rec take (n:int) (s : 'a stream) : ('a list) =
  | _, Cons (v, tl) -> v :: take (n-1) (demand tl)
 
 
+(* Exercise: Define a stream named ``ones`` of type int stream 
+   in which all values are ``1``. *) 
+let ones : int stream =  
+  let rec ones_h () =
+    Cons (1, delay (fun () -> ones_h ()))
+  in ones_h ()
+
+
+(* list processing function for streams *)
+
+let rec filter (p: 'a -> bool) (s: 'a stream) : 'a stream =
+  match s with
+  | Cons (hd, tl) ->
+     let rest = delay (fun () -> filter p (demand tl) )
+     in if p hd
+        then Cons (hd, rest)
+        else demand rest
+
+let even x = x mod 2 = 0
+
+let all_evens = filter even nats
+
+let rec map (f: 'a -> 'b) (s: 'a stream) : 'b stream =
+  match s with
+  | Cons (hd, tl) ->
+     Cons (f hd, delay (fun () -> map f (demand tl)))
+
+
+let rec zip (f: 'a -> 'b -> 'c) (s1: 'a stream) (s2: 'b stream) : 'c stream =
+  match s1, s2 with
+  | Cons (hd1, tl1), Cons (hd2, tl2) ->
+     Cons (f hd1 hd2, delay (fun () -> zip f (demand tl1) 
+                                           (demand tl2) ) )
+
+let all_evens_v2 = zip ( * ) nats (map (fun x -> x + 1) ones)
+
+let all_evens_v3 = zip (+) nats nats
+
+(* Computing factorials
+
+   nats       = 1   2   3   4    5     6 
+                 \   \   \   \    \     \
+                  *   *   *   *    *     *
+                   \   \   \   \    \     \
+   factorials = 1-*-1-*-2-*-6-*-24-*-120-*-720
+
+   We can define factorials recursively.  Each element in the
+   stream
+   is the product of then "next" natural number and the previous
+   factorial.
+ *)
+let factorials : int stream =
+  let rec facts_from () =
+      Cons (1, delay (fun () -> zip ( * ) nats ( facts_from () ) ) )
+  in facts_from ()
