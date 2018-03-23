@@ -569,7 +569,7 @@ should satisfy it.
 
 ~~This specification will appear soon - by March 6 at the latest.  When
 it is ready and announcement on Canvas will be sent.~~
-This part is now partial credit.
+This part is now extra credit.
 You can find it [here](Hwk_04_Programs_as_Data_Extra_Credit.md).
 
 
