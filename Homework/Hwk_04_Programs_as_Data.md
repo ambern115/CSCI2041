@@ -2,7 +2,7 @@
 
 *CSci 2041: Advanced Programming Principles, Spring 2018*
 
-**Due:** Sunday, March 25, at 5:00 PM.
+**Due:** Sunday, March 25, at ~~5:00~~ 11:59 PM.
 
 This homework will focus expression evaluation and other functions
 over expressions represented as inductive data types in OCaml.  The
