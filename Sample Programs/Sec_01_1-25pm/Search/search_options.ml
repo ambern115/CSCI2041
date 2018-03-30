@@ -23,8 +23,21 @@
 
 
 let gen_subsets lst
-= [] (* complete this *)
+= let rec helper set accum =
+    match set with
+    | [] -> accum
+    | hd::tl -> helper tl (accum @ List.map (fun x -> hd::x) accum)
+  in
+  helper lst [ [] ]
 
+let gen_subsets_v2 lst
+  = let rec helper partial_subset rest
+      = match rest with
+      | [] -> [ partial_subset ] 
+      | x::xs -> (helper (x :: partial_subset) xs)
+                 @
+                 (helper partial_subset xs)
+    in helper [] lst
 
 (* --- 
    Options
@@ -42,7 +55,16 @@ let sum lst = List.fold_left (+) 0 lst
  *)
 
 let subsetsum_option_v1 (lst : 'a list) : 'a list option 
-  = None (* complete this *)
+  = let rec helper partial_subset rest
+      = if sum partial_subset = 0 && partial_subset <> [] && rest = []
+        then Some partial_subset
+        else 
+          match rest with
+          | [] -> None
+          | x::xs -> match helper (x::partial_subset) xs with
+                     | None -> helper partial_subset xs
+                     | Some result -> Some result
+    in helper [] lst
 
 
 
@@ -57,7 +79,18 @@ let subsetsum_option_v1 (lst : 'a list) : 'a list option
  *)
 
 let subsetsum_option_v2 (lst: int list) : int list 
-  = [] (* complete this *)
+  = let rec helper partial_subset rest
+      = if sum partial_subset = 0 && partial_subset <> [] && rest = []
+        then Some partial_subset
+        else 
+          match rest with
+          | [] -> None
+          | x::xs -> match helper (x::partial_subset) xs with
+                     | None -> helper partial_subset xs
+                     | Some result -> Some result
+    in match helper [] lst with
+       | None -> []
+       | Some lst -> lst
 
 
 
@@ -109,6 +142,15 @@ let rec process_solution_option show s =
    to indicate that the search should continue or end.
  *)
 let subsetsum_option (lst: int list) : int list option
-  = None (* complete this *)
+  = let rec helper partial_subset rest 
+      = if sum partial_subset = 0 && partial_subset <> [] && rest = []
+        then process_solution_option (show_list string_of_int) partial_subset
+        else 
+          match rest with
+          | [] -> None
+          | x::xs -> match helper (x::partial_subset) xs with
+                     | None -> helper partial_subset xs
+                     | Some result -> Some result
+    in helper [] lst
 
 
