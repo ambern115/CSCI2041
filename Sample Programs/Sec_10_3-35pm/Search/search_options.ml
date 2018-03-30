@@ -22,8 +22,14 @@
  *)
 
 
-let gen_subsets lst
-= [] (* complete this *)
+let gen_subsets (lst: 'a list) : 'a list list
+  = let rec helper partial_subset rest =
+      match rest with
+      | [] -> [ partial_subset ]
+      | hd::tl -> (helper (hd :: partial_subset) tl)
+                  @
+                  (helper  partial_subset tl)
+    in helper [] lst
 
 
 (* --- 
@@ -41,8 +47,23 @@ let sum lst = List.fold_left (+) 0 lst
    looking for, then it returns that values wrapped up in a Some.
  *)
 
-let subsetsum_option_v1 (lst : 'a list) : 'a list option 
-  = None (* complete this *)
+let subsetsum_option_v1 (lst : 'a list) : 'a list option  =
+  let rec try_subset partial_subset rest 
+    = if sum partial_subset = 0 && partial_subset <> [] &&
+           rest = []
+      then Some partial_subset
+      else
+        match rest with
+        | [] -> None
+        | hd::tl -> match try_subset (hd::partial_subset) tl with
+                    | None -> try_subset partial_subset tl
+                    | Some result -> Some result
+  in try_subset [] lst
+
+
+
+
+
 
 
 
@@ -108,7 +129,20 @@ let rec process_solution_option show s =
    The process_solution_optoin function returns None of a Some value
    to indicate that the search should continue or end.
  *)
-let subsetsum_option (lst: int list) : int list option
-  = None (* complete this *)
+let subsetsum_option (lst: int list) : int list option  = 
+  let rec try_subset partial_subset rest 
+    = if sum partial_subset = 0 && partial_subset <> [] &&
+           rest = []
+      then process_solution_option (show_list string_of_int)
+                                   partial_subset
+      else
+        match rest with
+        | [] -> None
+        | hd::tl -> match try_subset (hd::partial_subset) tl with
+                    | None -> try_subset partial_subset tl
+                    | Some result -> Some result
+  in try_subset [] lst
+
+
 
 
