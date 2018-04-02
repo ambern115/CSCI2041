@@ -4,7 +4,7 @@ Here are the homeworks by posting date, with title and steward graduate TA.
 
 | Due    | Num | Title                                         | Steward  | Points |
 |--------|-----|-----------------------------------------------|----------|--------|
-| TBD    |  6  | Modules                                       | Mary     |        |
+| Apr 12 |  6  | Modules                                       | Mary     |        |
 | Apr 05 |  5  | Lazy Evaluation                               | Sean     | TBD    |
 | Mar 25 |  4  | Programs as data: evaluation                  | Duanyang |        |
 | Feb 25 |  3  | Reasoning About Correctness                   | Mary     | 124    |
