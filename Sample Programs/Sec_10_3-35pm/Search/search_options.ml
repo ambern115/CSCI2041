@@ -22,14 +22,27 @@
  *)
 
 
-let gen_subsets (lst: 'a list) : 'a list list
-  = let rec helper partial_subset rest =
-      match rest with
-      | [] -> [ partial_subset ]
-      | hd::tl -> (helper (hd :: partial_subset) tl)
-                  @
-                  (helper  partial_subset tl)
+(* The function below shows the same structure that we will see in the
+   search functions below and in other files in this directory. *)
+let gen_subsets lst
+  = let rec helper partial_subset rest
+      = match rest with
+      | [] -> [ partial_subset ] 
+      | x::xs -> (helper (x :: partial_subset) xs)
+                 @
+                 (helper partial_subset xs)
     in helper [] lst
+
+
+(* This function is fine for finding all subsets, but doesn't have the
+   same structure as the following search functions. *)
+let gen_subsets_alternate lst
+= let rec helper set accum =
+    match set with
+    | [] -> accum
+    | hd::tl -> helper tl (accum @ List.map (fun x -> hd::x) accum)
+  in
+  helper lst [ [] ]
 
 
 (* --- 
@@ -56,13 +69,9 @@ let subsetsum_option_v1 (lst : 'a list) : 'a list option  =
         match rest with
         | [] -> None
         | hd::tl -> match try_subset (hd::partial_subset) tl with
-                    | None -> try_subset partial_subset tl
                     | Some result -> Some result
+                    | None -> try_subset partial_subset tl
   in try_subset [] lst
-
-
-
-
 
 
 
@@ -77,8 +86,21 @@ let subsetsum_option_v1 (lst : 'a list) : 'a list option  =
    procedure.
  *)
 
-let subsetsum_option_v2 (lst: int list) : int list 
-  = [] (* complete this *)
+let subsetsum_option_v2 (lst: int list) : int list =
+  let rec try_subset partial_subset rest_of_the_set =
+    if sum partial_subset = 0 && partial_subset <> [] && rest_of_the_set = [] 
+    then Some partial_subset 
+    else 
+      match rest_of_the_set with
+      | [] -> None
+      | x::xs -> match try_subset (partial_subset @ [x]) xs with
+		 | Some result -> Some result
+		 | None -> try_subset partial_subset  xs
+                                
+  in match try_subset [] lst with
+     | None -> []
+     | Some result -> result
+
 
 
 

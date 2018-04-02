@@ -22,15 +22,9 @@
  *)
 
 
+(* The function below shows the same structure that we will see in the
+   search functions below and in other files in this directory. *)
 let gen_subsets lst
-= let rec helper set accum =
-    match set with
-    | [] -> accum
-    | hd::tl -> helper tl (accum @ List.map (fun x -> hd::x) accum)
-  in
-  helper lst [ [] ]
-
-let gen_subsets_v2 lst
   = let rec helper partial_subset rest
       = match rest with
       | [] -> [ partial_subset ] 
@@ -38,6 +32,18 @@ let gen_subsets_v2 lst
                  @
                  (helper partial_subset xs)
     in helper [] lst
+
+
+(* This function is fine for finding all subsets, but doesn't have the
+   same structure as the following search functions. *)
+let gen_subsets_alternate lst
+= let rec helper set accum =
+    match set with
+    | [] -> accum
+    | hd::tl -> helper tl (accum @ List.map (fun x -> hd::x) accum)
+  in
+  helper lst [ [] ]
+
 
 (* --- 
    Options
@@ -62,8 +68,8 @@ let subsetsum_option_v1 (lst : 'a list) : 'a list option
           match rest with
           | [] -> None
           | x::xs -> match helper (x::partial_subset) xs with
-                     | None -> helper partial_subset xs
                      | Some result -> Some result
+                     | None -> helper partial_subset xs
     in helper [] lst
 
 
@@ -86,8 +92,8 @@ let subsetsum_option_v2 (lst: int list) : int list
           match rest with
           | [] -> None
           | x::xs -> match helper (x::partial_subset) xs with
-                     | None -> helper partial_subset xs
                      | Some result -> Some result
+                     | None -> helper partial_subset xs
     in match helper [] lst with
        | None -> []
        | Some lst -> lst
