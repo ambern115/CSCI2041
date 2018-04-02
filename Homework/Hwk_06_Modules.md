@@ -4,6 +4,10 @@
 
 **Due:** Thursday, April 12 at 11:59 PM.
 
+**Change log:**
++ Monday, April 2: (Mitchell), typo fix ("us" changed to "use") in 
+A stream functor description.
+
 ## Introduction
 
 In this assignment you will package up parts of your solution to
@@ -66,7 +70,7 @@ end
 
 ## A stream functor
 
-Streams, as defined in the ``lazy.ml`` file mentioned above, made us
+Streams, as defined in the ``lazy.ml`` file mentioned above, made use
 of the ``lazee`` type and its functions defined in that same file.
 Here we want to make this dependency explicit by defining a stream
 functor that takes a lazy module as it argument.
