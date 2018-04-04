@@ -4,7 +4,8 @@ Here are the labs by week, with title and steward graduate TA.
 
 |Week|Date  |Title                                         |Steward | Graded? | Points |
 |----|------|----------------------------------------------|--------|---------|--------|
-| 10 |Mar 27| Modules                                      |Mary    |    Y    |        |
+| 11 |Apr 3 | Supervised Work and Quiz Collection          |Duanyang|         |        |
+| 10 |Mar 27| Modules                                      |Mary    |         |        |
 | 9  |Mar 20| Review of Hwk 3 and proofs of correcntes     |(All)   |    N    |  --    |
 | 8  |Mar  6| Work in Hwk 3 and 4                          |Duanyang|    N    |  --    |
 | 7  |Feb 27| Practice reasoning about correctness problems|Mary    |    N    |  --    |
